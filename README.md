@@ -2,8 +2,8 @@
 
 
 <div align="center">
-    An app with more different game
-    Mobile First
+    An app with multiple games,
+    Designed and dev mobile first.
 
 </div >  
  
