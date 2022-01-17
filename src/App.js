@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Home />
       <Routes>
-        <Route path="/ " component={Home}/>
+        <Route path="/" component={Home}/>
       </Routes>
     </div>
   );
