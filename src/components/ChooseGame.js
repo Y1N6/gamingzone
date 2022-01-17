@@ -1,19 +1,25 @@
-
+import { useNavigate } from "react-router-dom";
+import Nav from "./Nav";
 
 import "./styles/ChooseGame.css"
 
 const ChooseGame = () => {
+  let navigate = useNavigate()
   
 
-  let Deletelocalstorage = () => {
+  let deleteLocalStorage = () => {
     window.localStorage.clear();
+    navigate(`/identification`)
 }
 
   return (
-    <div id="ChooseGame">
-      <div>ChooseGame Gaming Zone</div>
-      <div>Tu es bien identifié</div>
-      <button onClick={Deletelocalstorage}>Delete Pseudo</button>
+    <div id="IdOk">
+      <Nav />
+      <div className="ChooseGame">
+        <div>Bienvenue {localStorage.getItem('name')}</div>
+        <div>ChooseGame Gaming Zone</div>
+        <button onClick={deleteLocalStorage}>Delete Pseudo</button>
+      </div>
     </div>
   )
 }

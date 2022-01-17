@@ -1,0 +1,26 @@
+#Pseudo {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(52, 52, 151);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+}
+
+#inputName {
+    background-color: rgb(52, 52, 250);
+    color: white;
+}
+
+#Pseudo button {
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 30px;
+    border: 1px black solid;
+}
+
+#Pseudo input {
+    width: 
+}
