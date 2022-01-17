@@ -1,0 +1,14 @@
+#Nav {
+    border-bottom: 2px red solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+.Navbar {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
