@@ -6,7 +6,7 @@ import Pseudo from '../components/Pseudo'
 const Home = () => {
 
   return (
-  <div>
+  <div className="home">
     {localStorage.getItem('name') ? <ChooseGame /> : <Pseudo />}
   </div>)
 }

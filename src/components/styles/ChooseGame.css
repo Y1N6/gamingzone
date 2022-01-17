@@ -1,0 +1,12 @@
+.ChooseGame {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 30px;
+    padding-top: 100px;
+}
+
+#IdOk {
+    position: relative;
+}

@@ -1,0 +1,40 @@
+.gameContainer {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(155deg, #FFFFFF, #A1ADDE, #0A2398, #5A219D, #2336C9, #48028D);
+
+}
+
+
+.digitWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(4, 80px);
+    justify-content: center;
+}
+#digit0 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+.numberGuessContainer {
+    display: flex;
+    justify-content:center;
+    align-items: center;    
+}
+.numberGuessDigit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    background: linear-gradient(127deg, #FF98D7, #2C46BE);
+    border: white solid 3px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.numberGuessValidate {
+
+}
