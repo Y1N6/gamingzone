@@ -12,7 +12,7 @@ const Nav = () => {
   return (
     <div id="nav">
       <div className="navBar" onClick={() => setActive(!active)}>Menu</div>
-      <div className="logo">Logo</div>
+      {/* <div className="logo">Logo</div> */}
       <div className={`navBarHidden ${active ? "navBarNotHidden" : ""}`}>
         <div className="navBarButton">
           <NavLink className="navLink" to="/gameList">Jeux</NavLink>

@@ -7,6 +7,7 @@
     width: 100%;
     position: fixed;
     color: white;
+    z-index: 2;
 }
 
 .navBar {

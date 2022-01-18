@@ -1,0 +1,119 @@
+.loadLogo {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+    top: 300px;
+    width: 100vw;
+    -webkit-animation: slide-top 1.5s linear 1.5s both, new-z-index 0 linear 3.5s both;
+    animation: slide-top 1.5s linear 1.5s both, new-z-index 0s linear 3.5s both;
+}
+   
+
+@-webkit-keyframes slide-top {
+    from {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+              z-index: 11;
+              top: 300px;
+             width: 100vw; 
+
+    }
+    to {
+      -webkit-transform: translateY(-270px);
+              transform: translateY(-270px);
+              z-index: 11;
+              width: 100vw;
+    }
+  }
+  @keyframes slide-top {
+    from {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+              z-index: 11;
+              width: 100vw;
+              top: 300px;
+
+    }
+    to {
+      -webkit-transform: translateY(-270px);
+              transform: translateY(-270px);
+              z-index: 11;
+              width: 100vw;
+
+    }
+  }
+
+  @-webkit-keyframes new-z-index {
+    from {
+              z-index: 11;
+              /* width: 100vw;
+              height: 100vh; */
+    }
+    to {
+              z-index: 1;
+              /* width: 100%;
+              height: auto; */
+              /* top: 25px; */
+    }
+  }
+  @keyframes new-z-index {
+    from {
+              z-index: 11;
+              /* width: 100vw;
+              height: 100vh; */
+    }
+    to {
+              z-index: 1;
+              /* width: 100%;
+              height: auto;
+              top: 25px; */
+    }
+  }
+  
+  .loadBackGround {
+    position: absolute;
+    background-color: pink;
+    -webkit-animation: slide-bottom 1s ease-out 2.8s both;
+    animation: slide-bottom 1s ease-out 2.8s both;
+}
+
+@-webkit-keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+              display: flex;
+              width: 100vw;
+              height: 100vh;
+              z-index: 5;
+    }
+    100% {
+      -webkit-transform: translateY(1000px);
+              transform: translateY(1000px);
+              display: none;
+              width: 100vw;
+              height: 0;
+              z-index: 1;
+
+    }
+  }
+  @keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            z-index: 5;
+    }
+    100% {
+      -webkit-transform: translateY(1000px);
+              transform: translateY(1000px);
+              display: none;
+              width: 100vw;
+              height: 0;
+              z-index: 1;
+    }
+  }

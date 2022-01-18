@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom"
+import Load from "./Load"
 
 import "./styles/Pseudo.css"
 
@@ -15,6 +16,7 @@ const Pseudo = () => {
 
   return (
     <form id="Pseudo" onSubmit={addlocalstorage}>
+      {/* <Load /> */}
       <div>Bienvenue !</div>
       <label for='inputName'>Inscris ton pseudo :</label>
       <input required id='inputName' type="text" minLength="2" maxLength="15" placeholder="Pikachu"></input>
