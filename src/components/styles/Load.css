@@ -49,27 +49,19 @@
   @-webkit-keyframes new-z-index {
     from {
               z-index: 11;
-              /* width: 100vw;
-              height: 100vh; */
+  
     }
     to {
               z-index: 1;
-              /* width: 100%;
-              height: auto; */
-              /* top: 25px; */
     }
   }
   @keyframes new-z-index {
     from {
               z-index: 11;
-              /* width: 100vw;
-              height: 100vh; */
     }
     to {
               z-index: 1;
-              /* width: 100%;
-              height: auto;
-              top: 25px; */
+
     }
   }
   
