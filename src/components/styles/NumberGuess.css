@@ -12,25 +12,45 @@
   );
 }
 
+.returnBtnContainer {
+  justify-content: flex-start;
+  padding: 10vh 0 0 2vw;
+}
+
 .numberGuessTitle,
 .numberGuessWrapper,
-#inputField,
+#outputField,
 .numberGuessContainer,
 .numberGuessDigit,
 .numberGuessValidate,
-#validateBtn {
+.restartArea,
+#eraseContainer,
+#validateBtn,
+#hintArea {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.numberGuessWrapper {
-  flex-direction: column;
+.numberGuessTitle {
+  height: 5vh;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
-#inputField {
+.restartArea {
+  height: 10vh;
+}
+
+.numberGuessWrapper {
+  flex-direction: column;
+  height: 85vh;
+}
+
+#outputField {
   height: 56px;
   width: 277px;
+  margin-bottom: 2vh;
   border-radius: 50px 50px 50px 50px / 50px 50px 50px 50px;
   background-color: white;
 }
@@ -46,8 +66,16 @@
   grid-row: 4/5;
 }
 
+#eraseContainer {
+  grid-column: 3/4;
+  grid-row: 4/5;
+}
+
 .numberGuessDigit,
-.numberGuessValidate {
+.numberGuessValidate,
+.eraseBtn,
+#restartBtn,
+#hintArea {
   height: 56px;
   width: 56px;
   border-radius: 50%;
@@ -56,13 +84,55 @@
   color: white;
   font-size: 2rem;
   font-weight: bold;
+  line-height: 0;
 }
 
-.numberGuessValidate {
+.numberGuessValidate,
+#restartBtn,
+#hintArea {
   width: 100px;
   height: 44px;
   border-radius: 50px 50px 50px 50px / 50px 50px 50px 50px;
   font-size: 1rem;
+}
+
+#hintArea {
+  background: linear-gradient(102deg, #cad1ef, #2c46be);
+  animation: 0.3s appear;
+}
+
+#restartBtn {
+  animation-name: appear, beat;
+  animation-duration: 0.3s, 1.5s;
+  animation-iteration-count: 1, infinite;
+  animation-delay: 0, 0.3s;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  70% {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 #validateBtn {
