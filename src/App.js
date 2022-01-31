@@ -6,6 +6,7 @@ import Home from "./screens/Home";
 import ChooseGame from "./components/ChooseGame";
 import Pseudo from "./components/Pseudo";
 import NumberGuess from "./components/NumberGuess";
+import PFC from "./components/PFC";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/identification" element={<Pseudo />} />
         <Route path="/gameList" element={<ChooseGame />} />
         <Route path="/numberGuess" element={<NumberGuess />} />
+        <Route path="/pfc" element={<PFC />} />
       </Routes>
     </div>
   );
