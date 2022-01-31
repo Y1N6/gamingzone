@@ -1,6 +1,7 @@
 import Nav from "./Nav";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import BackspaceLogo from "../assets/backspace.png";
 
 import "./styles/NumberGuess.css";
 
@@ -19,7 +20,7 @@ const NumberGuess = () => {
 
   const handleClickNum = (num) => {
     if (gameDone !== true) {
-      if (userInput.length < 1 && num == 0) {
+      if (userInput.length < 1 && num === 0) {
         return;
       } else {
         setUserInput(userInput + num);
@@ -142,7 +143,16 @@ const NumberGuess = () => {
           </div>
           <div id="eraseContainer">
             <button className="eraseBtn" onClick={erase}>
-              &#9166;
+              {
+                <img
+                  src={BackspaceLogo}
+                  alt=""
+                  style={{
+                    width: "80%",
+                    transform: "rotate(180deg) translateX(4%)",
+                  }}
+                />
+              }
             </button>
           </div>
           <div id="validateBtn">
