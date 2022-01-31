@@ -29,6 +29,13 @@ const ChooseGame = () => {
             ></img>
             <p>Morpion</p>
           </div>
+          <div className="game3" onClick={() => navigate("/pfc")}>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/3/36/Mars_Valles_Marineris_EDIT.jpg"
+              alt="gamethree"
+            ></img>
+            <p>Pierre Feuille Ciseaux</p>
+          </div>
         </div>
       </div>
     </div>
