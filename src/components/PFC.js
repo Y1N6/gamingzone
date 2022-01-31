@@ -9,6 +9,7 @@ const PFC = () => {
     const [choice, setChoice] = useState("")
     const [autoChoice, setAutoChoice] = useState("")
 
+
     const newAutoChoice = () => {
         const choice = ["Pierre", "Feuille", "Ciseaux"]
         const random = choice[Math.floor((Math.random()*3))]
@@ -30,8 +31,9 @@ const PFC = () => {
         newAutoChoice()
     }
 
-    console.log("choix", choice)
-    console.log("random", autoChoice)
+  
+
+
 
     return (
         <div className="gameContainer">
@@ -54,6 +56,7 @@ const PFC = () => {
                 <div className="PCFResultats">
                     <div>Votre Choix : {choice}</div>
                     <div>Choix du Pc : {autoChoice}</div>
+                    <div></div>
                 </div>
             </div>
         </div>
