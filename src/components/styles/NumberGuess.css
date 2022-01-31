@@ -1,40 +1,142 @@
 .gameContainer {
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(155deg, #FFFFFF, #A1ADDE, #0A2398, #5A219D, #2336C9, #48028D);
-
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    155deg,
+    #ffffff,
+    #a1adde,
+    #0a2398,
+    #5a219d,
+    #2336c9,
+    #48028d
+  );
 }
 
+.returnBtnContainer {
+  justify-content: flex-start;
+  padding: 10vh 0 0 2vw;
+}
+
+.numberGuessTitle,
+.numberGuessWrapper,
+#outputField,
+.numberGuessContainer,
+.numberGuessDigit,
+.numberGuessValidate,
+.restartArea,
+#eraseContainer,
+#validateBtn,
+#hintArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.numberGuessTitle {
+  height: 5vh;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.restartArea {
+  height: 10vh;
+}
+
+.numberGuessWrapper {
+  flex-direction: column;
+  height: 85vh;
+}
+
+#outputField {
+  height: 56px;
+  width: 277px;
+  margin-bottom: 2vh;
+  border-radius: 50px 50px 50px 50px / 50px 50px 50px 50px;
+  background-color: white;
+}
 
 .digitWrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 80px);
-    grid-template-rows: repeat(4, 80px);
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(5, 80px);
+  justify-content: center;
 }
 #digit0 {
-    grid-column: 2/3;
-    grid-row: 4/5;
-}
-.numberGuessContainer {
-    display: flex;
-    justify-content:center;
-    align-items: center;    
-}
-.numberGuessDigit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 56px;
-    width: 56px;
-    border-radius: 50%;
-    background: linear-gradient(127deg, #FF98D7, #2C46BE);
-    border: white solid 3px;
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
+  grid-column: 2/3;
+  grid-row: 4/5;
 }
 
-.numberGuessValidate {
+#eraseContainer {
+  grid-column: 3/4;
+  grid-row: 4/5;
+}
 
+.numberGuessDigit,
+.numberGuessValidate,
+.eraseBtn,
+#restartBtn,
+#hintArea {
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  background: linear-gradient(127deg, #ff98d7, #2c46be);
+  border: white solid 3px;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 0;
+}
+
+.numberGuessValidate,
+#restartBtn,
+#hintArea {
+  width: 100px;
+  height: 44px;
+  border-radius: 50px 50px 50px 50px / 50px 50px 50px 50px;
+  font-size: 1rem;
+}
+
+#hintArea {
+  background: linear-gradient(102deg, #cad1ef, #2c46be);
+  animation: 0.3s appear;
+}
+
+#restartBtn {
+  animation-name: appear, beat;
+  animation-duration: 0.3s, 1.5s;
+  animation-iteration-count: 1, infinite;
+  animation-delay: 0, 0.3s;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  70% {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#validateBtn {
+  align-items: flex-end;
+  grid-column: 1/4;
+  grid-row: 5/6;
 }
