@@ -8,6 +8,7 @@ const PFC = () => {
 
     const [choice, setChoice] = useState("")
     const [autoChoice, setAutoChoice] = useState("")
+    const [result, setResult] = useState("")
 
 
     const newAutoChoice = () => {
@@ -30,11 +31,32 @@ const PFC = () => {
         setChoice("Ciseaux")
         newAutoChoice()
     }
-
+    
   
-
-
-
+    useEffect(() => {
+            const chooseWinner = () => {
+                if (choice === "Pierre" && autoChoice === "Ciseaux"){
+                    setResult("Tu as Gagné")
+                } else if (choice ==="Pierre" && autoChoice === "Feuille"){
+                    setResult("Tu as Perdu")
+                } else if (choice === "Ciseaux" && autoChoice === "Feuille"){
+                    setResult("Tu as Gagné")
+                } else if (choice === "Ciseaux" && autoChoice === "Pierre"){
+                    setResult("Tu as Perdu")
+                } else if (choice === "Feuille" && autoChoice === "Pierre"){
+                    setResult("Tu as Gagné")
+                } else if (choice === "Feuille" && autoChoice === "Ciseaux"){
+                    setResult("Tu as Perdu")
+                } else {
+                    setResult("Egalité")
+                }
+            }
+            
+            chooseWinner();
+            
+        }, [autoChoice])
+        
+ 
     return (
         <div className="gameContainer">
             <Nav />
@@ -56,7 +78,7 @@ const PFC = () => {
                 <div className="PCFResultats">
                     <div>Votre Choix : {choice}</div>
                     <div>Choix du Pc : {autoChoice}</div>
-                    <div></div>
+                    <div>{result}</div>
                 </div>
             </div>
         </div>
