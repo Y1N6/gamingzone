@@ -1,0 +1,43 @@
+.morpionContainer h1 {
+    text-align: center;
+    padding: 50px;
+    width: 100vw;
+}
+
+.morpionContainer h3{
+    text-align: center;
+}
+
+.morpionGrid{
+    display: grid;
+    grid-template: repeat(3, 100px) / repeat(3,100px);
+    width: 300px;
+    height: 300px;
+    margin: 50px auto;
+   
+}
+
+.morpionCell{
+    border: 1px solid salmon;
+}
+
+.reset{
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+.win{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+    background: salmon;
+    opacity: .8;
+}

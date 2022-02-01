@@ -22,7 +22,7 @@ const ChooseGame = () => {
             ></img>
             <p>Devine le nombre!</p>
           </div>
-          <div className="game2">
+          <div className="game2"  onClick={() => navigate("/morpion")}>
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/3/36/Mars_Valles_Marineris_EDIT.jpg"
               alt="gametwo"
