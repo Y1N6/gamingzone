@@ -36,6 +36,13 @@ const ChooseGame = () => {
             ></img>
             <p>Pierre Feuille Ciseaux</p>
           </div>
+          <div className="game4" onClick={() => navigate("/simonSays")}>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/3/36/Mars_Valles_Marineris_EDIT.jpg"
+              alt="gamefour"
+            ></img>
+            <p>Simon</p>
+          </div>
         </div>
       </div>
     </div>
