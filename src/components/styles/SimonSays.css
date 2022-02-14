@@ -1,0 +1,45 @@
+.colorBtn {
+  height: 50px;
+  width: 50px;
+}
+
+.simonGameWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.colorBtn {
+  margin: 30px 5px;
+}
+
+#greenBtn {
+  background-color: green;
+}
+#blueBtn {
+  background-color: blue;
+}
+#redBtn {
+  background-color: red;
+}
+#yellowBtn {
+  background-color: yellow;
+}
+
+#greenBtn.chosen,
+#blueBtn.chosen,
+#redBtn.chosen,
+#yellowBtn.chosen {
+  animation: 1s tileAnimate;
+}
+
+@keyframes tileAnimate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
